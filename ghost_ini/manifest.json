@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ghost_Ini",
+  "description": "Ghost",
+  "version": "2",
+  "icons": {
+    "128": "Ghost.png"
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "management"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["jquery.min.js","content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "Ghost.png",
+    "default_popup": "Ghost.html"
+  }
+
+}
+
+
+
+
